@@ -1,19 +1,30 @@
 import React from 'react'
-import { Navbar, Container, Nav } from 'react-bootstrap'
-import ReactRouterBootstrap, { LinkContainer } from 'react-router-bootstrap';
+import { Navbar, Container, Nav, Form, FormControl , Button } from 'react-bootstrap'
+import { LinkContainer} from 'react-router-bootstrap';
 
 export default function NavigationBar() {
   return (
     <Navbar bg="light" expand="lg">
-  <Container>
+      
    <LinkContainer to='/'> 
-      <Navbar.Brand>Logo Here</Navbar.Brand> 
-   </LinkContainer>
+      <Navbar.Brand className='ms-3'>Logo Here</Navbar.Brand> 
+  </LinkContainer>
+  
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
-  </Container>
+  
     <Navbar.Collapse id="basic-navbar-nav">
-      <Container>
-      <Nav className="me-auto">
+     <Container className='d-flex justify-content-center'>
+     <Form className="d-flex w-50">
+        <FormControl
+          type="search"
+          placeholder="Search"
+          className="me-2"
+          aria-label="Search"
+        />
+        <Button variant="outline-success">Search</Button>
+      </Form>
+     </Container>
+      <Nav className='me-3'>
       <LinkContainer to='/'>
         <Nav.Link>Home</Nav.Link>
         </LinkContainer>
@@ -24,8 +35,8 @@ export default function NavigationBar() {
           <Nav.Link>SignIn</Nav.Link> 
         </LinkContainer>
       </Nav>
-      </Container>
     </Navbar.Collapse>
+
   
 </Navbar>
   )

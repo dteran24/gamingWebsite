@@ -1,7 +1,7 @@
-import Home from './components/Home'
-import Review from './components/Review';
+import Home from './pages/Home'
+import Review from './pages/Review';
 import Nav from './components/NavigationBar';
-import SignIn from './components/SignIn';
+import SignIn from './pages/SignIn';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
