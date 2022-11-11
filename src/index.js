@@ -19,8 +19,6 @@ ReactDOM.render(
       <App />
     </ChakraProvider>
     </Provider>
-    
-
   </React.StrictMode>,
   document.getElementById('root')
 );
